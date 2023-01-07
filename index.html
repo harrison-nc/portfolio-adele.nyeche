@@ -5,54 +5,82 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adele Nyeche</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Radley:ital@0;1&family=Vast+Shadow&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/aecd2a02e1.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header class="primary-header">
     <div class="container">
-      <div>
-        <a href="#"><img src="/assets/Frame 21.svg" alt="Brand"></a>
-        <div class="socials">
+      <div class="primary-nav">
+        <a href="#" class="brand">AN</a>
+        <div class="socials | display-md">
           <ul role="list">
-            <li><a href=""><img src="/assets/icons8-behance-60.svg" alt="Behance"></a></li>
-            <li><a href=""><img src="/assets/icons8-behance-60.svg" alt="LinkedIn"></a></li>
-            <li><a href=""><img src="/assets/icons8-medium-monogram-60.svg" alt="Medium"></a></li>
+            <li><a href="#"><i class="fa-brands fa-square-behance"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="#"><img src="/assets/icons8-medium-monogram-60.svg" alt="Medium"></a></li>
           </ul>
         </div>
-        <button type="button">Download Resume</button>
+        <button type="button" class="button | display-md">Download Resume</button>
+        <button type="button" class="hamburger | display-sm" aria-expanded="false">
+          <i class="fa-solid fa-bars" data-opened></i>
+          <i class="fa-solid fa-xmark" data-closed></i>
+        </button>
       </div>
     </div>
   </header>
 
   <main>
-    <section style="background-color: grey;">
-      <p role="heading" aria-level="7">Hello, i'm</p>
-      <h1 class="visually-hidden">Adele Nyeche</h1>
-      <img src="/assets/Frame 31.svg" alt="">
-      <p>
-        a <span class="role">Product Designer</span> with creative skills in designing beautiful and functional products
-        centered on exclusivity and accessibility by conducting thorough
-        <span class="subject">User Research</span> and stunning
-        <span>User Interface</span>
-      </p>
-      <p style="background-color: grey; color: white">Published case study
-        <img src="/assets/arrow-up-right.svg" alt="">
-      </p>
+    <section>
+      <div class="hero | centered pt-400">
+        <p role="heading" aria-level="7">Hello, i'm</p>
+        <h1 class="visually-hidden">Adele Nyeche</h1>
+        <img src="/assets/Frame_31.svg" alt="">
+        <p>
+          a <span class="role">Product Designer</span> with creative skills in designing beautiful and functional
+          products
+          centered on exclusivity and accessibility by conducting thorough
+          <span class="subject">User Research</span> and stunning
+          <span>User Interface</span>
+        </p>
+        <a href="#" class="pt-200">Published case study
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.08331 9.91665L9.91665 4.08331" stroke="#F1F1F1" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M4.08331 4.08331H9.91665V9.91665" stroke="#F1F1F1" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <rect x="0.5" y="0.5" width="13" height="13" rx="6.5" stroke="#F1F1F1" />
+          </svg>
+        </a>
+      </div>
     </section>
     <section>
-      <h2>Tools</h2>
-      <div class="tools">
-        <div class="even-columns" style="background-color: grey;">
-          <div><img src="/assets/Frame 40.svg" alt="Adobe XD"></div>
-          <div><img src="/assets/Frame 48.svg" alt="Figma"></div>
-          <div><img src="/assets/Frame 47.svg" alt="Miro"></div>
-          <div><img src="/assets/Frame 53.svg" alt="Notion"></div>
-          <div><img src="/assets/Frame 46.svg" alt="Web flow"></div>
+      <div class="tools pt-400">
+        <h2 class="section-title">Tools</h2>
+        <div>
+          <div class="centered" data-direction="horizontal">
+            <div class="tool-item">
+              <img src="/assets/Frame_40.svg" alt="Adobe XD"></div>
+            <div class="tool-item">
+              <img src="/assets/Frame_48.svg" alt="Figma"></div>
+            <div class="tool-item">
+              <img src="/assets/Frame_47.svg" alt="Miro"></div>
+            <div class="tool-item">
+              <img src="/assets/Frame_53.svg" alt="Notion"></div>
+            <div class="tool-item">
+              <img src="/assets/Frame_46.svg" alt="Web flow"></div>
+          </div>
         </div>
       </div>
     </section>
     <section>
-      <div class="container">
+      <div class="container pt-300">
         <h2>Live Products</h2>
         <article>
           <div class="even-columns">
@@ -63,7 +91,7 @@
                 minutes and without any hassle.</p>
               <p>In my role as a designer, I contributed to the creation of the design system, UI components and
                 conducting and intensive UI audit.</p>
-              <ul role="list">
+              <ul role="list" class="contribution-list">
                 <li>
                   <p><span>Role</span><span>Product Designer</span></p>
                 </li>
@@ -76,14 +104,14 @@
               </ul>
             </div>
             <div>
-              <img src="/assets/Frame 15.png" alt="Kwik Invoice Mockup">
+              <img src="/assets/Frame_15.png" alt="Kwik Invoice Mockup">
             </div>
           </div>
         </article>
         <article>
-          <div class="even-columns">
+          <div class="even-columns" data-reversed="true">
             <div>
-              <img src="/assets/Frame 15.png" alt="DesignBloc Mockup">
+              <img src="/assets/Frame_15.png" alt="DesignBloc Mockup">
             </div>
             <div>
               <h3>DesignBloc</h3>
@@ -96,9 +124,9 @@
                 sketching. Collaboration, open-mindedness, and empathy were important soft skills that made working with
                 a team efficient.
               </p>
-              <ul>
+              <ul role="list" class="contribution-list">
                 <li>
-                  <p><span>Role</span><span>Product Designer</span></p>
+                  <p><span>Role</span><span>UI/UX Designer</span></p>
                 </li>
                 <li>
                   <p><span>Website link</span><span>DesignBloc</span></p>
@@ -112,7 +140,27 @@
         </article>
         <article>
           <div class="even-columns">
-
+            <div>
+              <h3>8Balls Hotel & Lounge</h3>
+              <p>8Balls hotel & lounge is the perfect place to experience Port Harcourt and its surroundings. With its
+                convenient location, the hotel offers easy access to the night life in the city .</p>
+              <p>In my role as a designer, I contributed to the creation of the design system, UI components and
+                conducting and intensive UI audit.</p>
+              <ul role="list" class="contribution-list">
+                <li>
+                  <p><span>Role</span><span>Product Designer</span></p>
+                </li>
+                <li>
+                  <p><span>Website link</span><span>8Balls Hotel & Lounge</span></p>
+                </li>
+                <li>
+                  <p><span>Deliverable</span><span>UI screens, UX design</span></p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <img src="/assets/Frame_15.png" alt="DesignBloc Mockup">
+            </div>
           </div>
         </article>
       </div>
@@ -121,22 +169,24 @@
 
   <footer>
     <section>
-      <h2>Available For Work</h2>
-      <p>Get the conversation started</p>
-      <button type="button">
-        <img src="/assets/message-circle.svg" alt="">
-        Reach Out
-      </button>
+      <div class="centered">
+        <h2>Available For Work</h2>
+        <p>Get the conversation started</p>
+        <button type="button" class="button">
+          <i class="fa-regular fa-comment"></i>
+          Reach Out
+        </button>
+      </div>
     </section>
     <section>
       <div class="container">
-        <div>
+        <div class="legal">
           <p>Copyright &copy;. All Rights Reserved. <span>Adele Nyeche</span></p>
-          <ul>
-            <li><a href="#"><img src="/assets/twitter.svg" alt="Twitter"></a></li>
-            <li><a href="#"><img src="/assets/LinkedIn.svg" alt="Linked In"></a></li>
-            <li><a href="#"><img src="/assets/icon.svg" alt="Behance"></a></li>
-            <li><a href="#"><img src="/assets/Vector 1.svg" alt="Dribble"></a></li>
+          <ul role="list" class="socials">
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-behance"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
           </ul>
         </div>
       </div>
