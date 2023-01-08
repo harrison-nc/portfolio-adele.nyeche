@@ -193,9 +193,14 @@ a.button {
   max-height: max-content !important;
 }
 
-.primary-nav .socials img {
+.primary-nav .socials img,
+.primary-nav .socials svg {
   width: var(--icon-size);
   display: block;
+}
+
+.primary-nav .socials svg {
+  height: var(--icon-size);
 }
 
 .tools {
