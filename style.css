@@ -5,6 +5,8 @@
   --ff-primary: inter;
   --ff-secondary: radley;
   --ff-tertiary: "vast shadow";
+  
+  --ff-brand: Pacifico;
 
   --fw-100: 400;
   --fw-200: 500;
@@ -138,6 +140,7 @@ a.button {
 }
 
 .brand {
+  font-family: var(--ff-brand);
   width: 7rem;
 }
 
