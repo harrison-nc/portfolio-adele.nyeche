@@ -158,15 +158,17 @@ a.button {
 }
 
 .products header {
-  display: flex;
-  flex-flow: column;
-  gap: var(--spacing-100);
   text-align: justify;
 }
 
 .products article {
   padding-block: var(--spacing-300);
 }
+
+/* .products article h3 + p,
+.products .contribution-list {
+  padding-block-start: var(--spacing-200);
+} */
 
 @media (min-width: 50rem) {
   .products header {
@@ -184,7 +186,6 @@ a.button {
 }
 
 .primary-nav {
-  height: 68px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -386,6 +387,7 @@ footer header .button {
 }
 
 .container {
+  padding-inline: max(var(--spacing-100), 5vw);
   min-width: max(400px, 90vw);
   max-width: 9rem;
   margin: 0 auto;
@@ -421,10 +423,6 @@ footer header .button {
 }
 
 @media (min-width: 50em) {
-  .container {
-    padding-inline: max(var(--spacing-100), 5vw);
-  }
-
   .display-md {
     display: block;
   }
