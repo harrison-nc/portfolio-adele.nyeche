@@ -157,14 +157,32 @@ a.button {
   font-size: 0.8125rem;
 }
 
-.products article {
-  padding-block: var(--spacing-300);
-  border-bottom: 1px solid var(--clr-neutral-100);
+.products header {
+  text-align: justify;
 }
 
-.products article h3 + p,
+.products article {
+  padding-block: var(--spacing-300);
+}
+
+/* .products article h3 + p,
 .products .contribution-list {
   padding-block-start: var(--spacing-200);
+} */
+
+@media (min-width: 50rem) {
+  .products header {
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    gap: var(--spacing-100);
+  }
+
+  .products article {
+    display: flex;
+    flex-flow: column;
+    gap: var(--spacing-300);
+  }
 }
 
 .primary-nav {
@@ -218,11 +236,23 @@ a.button {
   max-width: 70%;
 }
 
+@media (min-width: 50rem) {
+  .tool {
+    width: 120px;
+  }
+}
+
+@media (max-width: 50rem) {
+  .tools {
+    padding-inline: var(--fs-600);
+  }
+}
+
 .contribution-list li {
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
-  height: 4rem;
+  height: 3rem;
   position: relative;
 }
 
@@ -257,7 +287,6 @@ footer > header {
   justify-content: center;
   align-items: center;
   gap: var(--spacing-200);
-  padding-block-end: var(--spacing-400);
 }
 
 footer header h2.title.icon {
@@ -289,18 +318,6 @@ footer header .button {
     display: flex;
     justify-content: space-between;
   }
-
-  .tool {
-    width: 120px;
-  }
-
-  .products h3.title.icon {
-    justify-content: unset;
-  }
-
-  .products article {
-    padding-block-end: var(--spacing-400);
-  }
 }
 
 @media (max-width: 50rem) {
@@ -309,10 +326,6 @@ footer header .button {
     flex-flow: column;
     gap: 0.75rem;
     align-items: center;
-  }
-
-  .tools {
-    padding-inline: var(--fs-600);
   }
 }
 
@@ -369,8 +382,15 @@ footer header .button {
   font-weight: var(--fw-400);
 }
 
+.flex-fill {
+  align-items: normal;
+}
+
 .container {
-  padding-inline: var(--fs-600);
+  padding-inline: max(var(--spacing-100), 5vw);
+  min-width: max(400px, 90vw);
+  max-width: 9rem;
+  margin: 0 auto;
 }
 
 .even-columns {
@@ -381,6 +401,10 @@ footer header .button {
 
 .even-columns > * {
   flex: 1;
+}
+
+.even-columns[data-reversed] {
+  flex-flow: row-reverse;
 }
 
 .centered {
@@ -399,10 +423,6 @@ footer header .button {
 }
 
 @media (min-width: 50em) {
-  .container {
-    padding-inline: 140px;
-  }
-
   .display-md {
     display: block;
   }
@@ -423,10 +443,9 @@ footer header .button {
 
   .even-columns {
     flex-direction: column;
-    align-items: center;
   }
-
+  
   .even-columns[data-reversed] {
-    flex-flow: column-reverse;
+    flex-flow: column;
   }
 }
