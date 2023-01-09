@@ -27,3 +27,4 @@ dist-ssr
 .*
 !.gitignore
 !.gitattributes
+!.github
